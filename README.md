@@ -10,7 +10,9 @@ The code in this repository is a first attempt to implement the model on empiric
 - We have a sample of rated firms with their credit spreads, assets and equity values used as inputs of the model. 
 - We also have a sovereign interest rate term structure which is fundamental. 
 
-The probability of default is assumed as the probability of losses exceeding the firm's equity. The equity itself is modeled as composed of both cash and interest sensistive assets less liabilities. It is straightforward that the two-factor risk driving credit spreads are the value of cash assets and the level of stochasting default-free interest rates.
+The probability of default is assumed as the probability of losses exceeding the firm's equity. The equity itself is modeled as composed of both cash and interest sensistive assets less liabilities. It is straightforward that the two-factor risk driving credit spreads are the value of cash assets and the level of stochastic default-free interest rates.
+
+$h(V(t), r(t)) \simeq h(V_{0}, r_{0}) - \lambda f(E_{0}) V_{0} (\Delta lnV) - \lambda f(E_{0}) (g_{r} - \overset{-}{v}_{r}) (\Delta r)$
 
 By calibrating the parameters on credit spreads term structures the model can be readily implemented and gives an overview of the structural determinants of default.
 To model interest rates the one-factor short-rate model of Vasicek[^2] was used.
