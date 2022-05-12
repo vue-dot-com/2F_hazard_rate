@@ -45,6 +45,7 @@ As the model was implemented on empirical data, interesting results emerged.
 The code reported is a collection of Matlab files and functions used to calibrate the model. Every sheet comes with a description.
 - The file `DB.xlsx` is the model input with company names, ratings, assets, equity values and CDS term structures.
 - The script `test2.m` is the main sheet where all the computation is done and where you have to update the risk-free term structure. You just need to run that in order to have the model outputs. The code creates a dictionary where all the variables/outputs are stored by company.
+- The script `test_term_structures.m` is similar to the main sheet, however it uses simualted term structures to produce different hazard rates. The results obtained were presented in the section above which includes the plot of the term structures created with the Vasicek model and the corresponding probability of default (by rating class).
 
 ## Improvements
 The model is in closed form and this makes it very handy its application. On the theoretical side it should take into account also coupons paid by the company on its debt and also it needs CDS data to be calibrated on. 
